@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | Apurva Pet Care & Veterinary Clinic</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8fffc;
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #0b7a75;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd166;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+
+        /* ================= PAGE HERO ================= */
+
+        .page-hero {
+            background: linear-gradient(135deg, #e7fff7, #d5f5ff);
+            text-align: center;
+            padding: 70px 8%;
+        }
+
+        .page-hero h1 {
+            font-size: 46px;
+            color: #075e59;
+            margin-bottom: 12px;
+        }
+
+        .page-hero h1 span {
+            color: #f4a261;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: #555;
+        }
+
+
+        /* ================= APPOINTMENT SECTION ================= */
+
+        .appointment-section {
+            padding: 70px 8%;
+        }
+
+        .appointment-container {
+            max-width: 1000px;
+            margin: auto;
+
+            background-color: white;
+
+            padding: 45px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* ================= FORM TITLE ================= */
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .form-title h2 {
+            color: #075e59;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .form-title p {
+            color: #666;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .form-section-title {
+            color: #0b7a75;
+            font-size: 21px;
+
+            margin-top: 25px;
+            margin-bottom: 20px;
+
+            padding-bottom: 8px;
+
+            border-bottom: 2px solid #e2f7f2;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+
+            color: #444;
+        }
+
+        .required {
+            color: #e76f51;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            font-family: Arial, sans-serif;
+
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #0b7a75;
+
+            box-shadow: 0 0 0 3px rgba(11, 122, 117, 0.1);
+        }
+
+        .form-group textarea {
+            height: 120px;
+
+            resize: vertical;
+        }
+
+        .helper-text {
+            font-size: 13px;
+
+            color: #777;
+
+            margin-top: 5px;
+        }
+
+
+        /* ================= CHECKBOX ================= */
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            margin: 20px 0;
+        }
+
+        .checkbox-group input {
+            width: 18px;
+            height: 18px;
+
+            margin-top: 3px;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            color: #555;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .submit-btn {
+            width: 100%;
+
+            padding: 15px;
+
+            background-color: #0b7a75;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #075e59;
+        }
+
+
+        /* ================= SUCCESS MESSAGE ================= */
+
+        .success-message {
+            display: none;
+
+            background-color: #e2f7f2;
+
+            border-left: 5px solid #0b7a75;
+
+            padding: 25px;
+
+            margin-top: 25px;
+
+            border-radius: 10px;
+
+            text-align: center;
+        }
+
+        .success-message .success-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .success-message h3 {
+            color: #075e59;
+            margin-bottom: 8px;
+        }
+
+        .success-message p {
+            color: #555;
+        }
+
+
+        /* ================= INFORMATION CARDS ================= */
+
+        .info-section {
+            background-color: #f0fbf8;
+
+            padding: 60px 8%;
+        }
+
+        .info-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .info-card {
+            background-color: white;
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .info-icon {
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+        .info-card h3 {
+            color: #0b7a75;
+
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            color: #666;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #075e59;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 7px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .info-container {
+                grid-template-columns: 1fr;
+            }
+
+            .appointment-container {
+                padding: 30px 20px;
+            }
+
+            .page-hero h1 {
+                font-size: 36px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            🐾 Apurva <span>Pet Care</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+            
+            <a href="pet-health.html">Pet-Health</a>
+
+            <a href="tips.html">Tips</a>
+
+            <a href="appointment.html">Appointment</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <h1>
+            Book an <span>Appointment</span>
+        </h1>
+
+        <p>
+            Schedule a visit for your beloved pet
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= APPOINTMENT FORM ================= -->
+
+    <section class="appointment-section">
+
+        <div class="appointment-container">
+
+
+            <div class="form-title">
+
+                <h2>
+                    Pet Appointment Form
+                </h2>
+
+                <p>
+                    Please provide the details below so we can
+                    better understand your pet's needs.
+                </p>
+
+            </div>
+
+
+            <form id="appointmentForm">
+
+
+                <!-- OWNER DETAILS -->
+
+                <h3 class="form-section-title">
+                    👤 Owner Details
+                </h3>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="ownerName">
+                            Owner Name <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ownerName"
+                            name="ownerName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            required
+                        >
+
+                        <div class="helper-text">
+                            Enter a 10-digit mobile number.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                    >
+
+                </div>
+
+
+
+                <!-- PET DETAILS -->
+
+                <h3 class="form-section-title">
+                    🐾 Pet Details
+                </h3>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="petName">
+                            Pet Name <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="petName"
+                            name="petName"
+                            placeholder="Enter pet's name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="petType">
+                            Pet Type <span class="required">*</span>
+                        </label>
+
+                        <select
+                            id="petType"
+                            name="petType"
+                            required
+                        >
+
+                            <option value="">
+                                Select pet type
+                            </option>
+
+                            <option value="Dog">
+                                🐶 Dog
+                            </option>
+
+                            <option value="Cat">
+                                🐱 Cat
+                            </option>
+
+                            <option value="Rabbit">
+                                🐰 Rabbit
+                            </option>
+
+                            <option value="Bird">
+                                🐦 Bird
+                            </option>
+
+                            <option value="Other">
+                                🐾 Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="petAge">
+                            Pet Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="petAge"
+                            name="petAge"
+                            min="0"
+                            max="50"
+                            placeholder="Age in years"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="petGender">
+                            Pet Gender
+                        </label>
+
+                        <select
+                            id="petGender"
+                            name="petGender"
+                        >
+
+                            <option value="">
+                                Select gender
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- APPOINTMENT DETAILS -->
+
+                <h3 class="form-section-title">
+                    📅 Appointment Details
+                </h3>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="appointmentDate">
+                            Preferred Date <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="appointmentDate"
+                            name="appointmentDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="appointmentTime">
+                            Preferred Time <span class="required">*</span>
+                        </label>
+
+                        <select
+                            id="appointmentTime"
+                            name="appointmentTime"
+                            required
+                        >
+
+                            <option value="">
+                                Select preferred time
+                            </option>
+
+                            <option value="09:00 AM">
+                                09:00 AM
+                            </option>
+
+                            <option value="10:00 AM">
+                                10:00 AM
+                            </option>
+
+                            <option value="11:00 AM">
+                                11:00 AM
+                            </option>
+
+                            <option value="12:00 PM">
+                                12:00 PM
+                            </option>
+
+                            <option value="04:00 PM">
+                                04:00 PM
+                            </option>
+
+                            <option value="05:00 PM">
+                                05:00 PM
+                            </option>
+
+                            <option value="06:00 PM">
+                                06:00 PM
+                            </option>
+
+                            <option value="07:00 PM">
+                                07:00 PM
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="service">
+                        Required Service <span class="required">*</span>
+                    </label>
+
+                    <select
+                        id="service"
+                        name="service"
+                        required
+                    >
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <option value="General Consultation">
+                            General Consultation
+                        </option>
+
+                        <option value="Vaccination">
+                            Vaccination
+                        </option>
+
+                        <option value="Pet Grooming">
+                            Pet Grooming
+                        </option>
+
+                        <option value="Dental Care">
+                            Dental Care
+                        </option>
+
+                        <option value="Veterinary Surgery">
+                            Veterinary Surgery
+                        </option>
+
+                        <option value="Nutrition Guidance">
+                            Nutrition Guidance
+                        </option>
+
+                        <option value="Emergency Care">
+                            Emergency Care
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reason">
+                        Reason for Visit / Symptoms
+                    </label>
+
+                    <textarea
+                        id="reason"
+                        name="reason"
+                        placeholder="Please describe your pet's problem, symptoms, or reason for the visit..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- ADDITIONAL INFORMATION -->
+
+                <h3 class="form-section-title">
+                    📝 Additional Information
+                </h3>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Additional Notes
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Any additional information you would like us to know..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <div class="checkbox-group">
+
+                    <input
+                        type="checkbox"
+                        id="agreement"
+                        required
+                    >
+
+                    <label for="agreement">
+
+                        I confirm that the information provided
+                        above is correct and understand that the
+                        appointment request will need to be
+                        confirmed by the clinic.
+
+                    </label>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    🐾 Submit Appointment Request
+                </button>
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <div
+                    class="success-message"
+                    id="successMessage"
+                >
+
+                    <div class="success-icon">
+                        ✅
+                    </div>
+
+                    <h3>
+                        Appointment Request Submitted!
+                    </h3>
+
+                    <p>
+                        Thank you for choosing Apurva Pet Care.
+                        Your appointment request has been received.
+                    </p>
+
+                    <p>
+                        Our clinic will contact you to confirm
+                        the appointment.
+                    </p>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= INFORMATION ================= -->
+
+    <section class="info-section">
+
+        <div class="info-container">
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🕐
+                </div>
+
+                <h3>
+                    Clinic Hours
+                </h3>
+
+                <p>
+                    Monday - Saturday<br>
+                    9:00 AM - 7:00 PM
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    📞
+                </div>
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    +91 95150 32158
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🚑
+                </div>
+
+                <h3>
+                    Emergency
+                </h3>
+
+                <p>
+                    For urgent situations,
+                    please contact the clinic directly.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            🐾
+            <strong>
+                Apurva Pet Care & Veterinary Clinic
+            </strong>
+        </p>
+
+        <p>
+            Caring for pets, supporting families ❤️
+        </p>
+
+        <p>
+            © 2026 Apurva Pet Care. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const appointmentForm =
+            document.getElementById("appointmentForm");
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+
+        appointmentForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            /*
+             * This currently displays a success message.
+             *
+             * Later, we can replace this section with
+             * code that sends the appointment information
+             * to a backend and stores it in MySQL.
+             */
+
+
+            successMessage.style.display = "block";
+
+
+            appointmentForm.reset();
+
+
+            successMessage.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

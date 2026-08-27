@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apurva Pet Care & Veterinary Clinic</title>
+
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8fffc;
+            line-height: 1.7;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #0b7a75;
+            color: white;
+
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd166;
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 22px;
+
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 85vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 60px 8%;
+
+            background: linear-gradient(
+                135deg,
+                #e7fff7,
+                #d5f5ff
+            );
+        }
+
+        .hero-container {
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        /* HERO TEXT */
+
+        .hero-content {
+            color: #333;
+
+            text-align: left;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+
+            line-height: 1.2;
+
+            color: #075e59;
+
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: #f4a261;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+
+            color: #555;
+
+            margin-bottom: 28px;
+
+            max-width: 550px;
+        }
+
+
+        /* HERO BUTTONS */
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            background-color: #0b7a75;
+
+            color: white;
+
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #075e59;
+
+            transform: translateY(-3px);
+        }
+
+        .hero-btn.second {
+            background-color: #f4a261;
+
+            color: white;
+        }
+
+        .hero-btn.second:hover {
+            background-color: #e76f51;
+        }
+
+
+        /* HERO IMAGE */
+
+        .hero-image {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+
+            height: 430px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ================= COMMON SECTION ================= */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+
+            color: #075e59;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            display: flex;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .about-box {
+            flex: 1;
+        }
+
+        .about-box h3 {
+            font-size: 28px;
+
+            color: #0b7a75;
+
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+
+            color: #555;
+        }
+
+        .about-card {
+            background-color: #e2f7f2;
+
+            padding: 50px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            font-size: 90px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .read-btn {
+            display: inline-block;
+
+            background-color: #0b7a75;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin-top: 10px;
+        }
+
+        .read-btn:hover {
+            background-color: #075e59;
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background-color: #f0fbf8;
+        }
+
+        .service-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            font-size: 50px;
+
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #0b7a75;
+
+            margin-bottom: 10px;
+
+            font-size: 22px;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+
+            color: #666;
+        }
+
+
+        /* ================= WHY CHOOSE US ================= */
+
+        .features {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .feature {
+            text-align: center;
+
+            padding: 30px 20px;
+
+            background-color: #f8fffc;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-7px);
+        }
+
+        .feature-icon {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #075e59;
+
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #666;
+        }
+
+
+        /* ================= APPOINTMENT ================= */
+
+        .appointment {
+            background-color: #e8f9f5;
+        }
+
+        .appointment-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+
+            color: #075e59;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+
+            border: none;
+
+            padding: 15px;
+
+            background-color: #0b7a75;
+
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 17px;
+
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #075e59;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            text-align: center;
+        }
+
+        .contact-card {
+            padding: 30px;
+
+            background-color: #f0fbf8;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card .icon {
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            color: #0b7a75;
+
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #666;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .cta {
+            background-color: #0b7a75;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 18px;
+
+            margin-bottom: 25px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+
+            background-color: #ffd166;
+
+            color: #333;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .cta-btn:hover {
+            background-color: #f4a261;
+
+            color: white;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #075e59;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 7px;
+        }
+
+
+        /* ================= POPUP ================= */
+
+        .popup {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.5);
+
+            justify-content: center;
+
+            align-items: center;
+
+            z-index: 2000;
+        }
+
+        .popup-box {
+            background-color: white;
+
+            width: 90%;
+
+            max-width: 450px;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup-icon {
+            font-size: 55px;
+
+            margin-bottom: 15px;
+        }
+
+        .popup-box h2 {
+            color: #0b7a75;
+
+            margin-bottom: 10px;
+        }
+
+        .popup-box p {
+            color: #666;
+
+            margin-bottom: 25px;
+        }
+
+        .popup-btn {
+            border: none;
+
+            background-color: #0b7a75;
+
+            color: white;
+
+            padding: 12px 30px;
+
+            border-radius: 25px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        .popup-btn:hover {
+            background-color: #075e59;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 7px;
+
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 50px 6%;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image img {
+                height: 350px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 40px 5%;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .hero-image img {
+                height: 280px;
+            }
+
+            .service-container,
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .about-card {
+                font-size: 60px;
+
+                padding: 35px;
+            }
+
+            .appointment-box {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            🐾 Apurva <span>Pet Care</span>
+        </div>
+
+        <nav>
+
+            <a href="#home.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="pet-health.html">Pet-Health</a>
+
+            <a href="tips.html">Tips</a>
+
+            <a href="appointment.html">Appointment</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-container">
+
+
+            <div class="hero-content">
+
+                <h1>
+                    Healthy Pets,
+                    <span>Happy Families!</span>
+                </h1>
+
+                <p>
+                    Welcome to Apurva Pet Care & Veterinary Clinic.
+                    We provide caring and professional veterinary
+                    services for your beloved pets.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#appointment" class="hero-btn">
+                        🐾 Book Appointment
+                    </a>
+
+                    <a href="#services" class="hero-btn second">
+                        Our Services
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="images/hero.jpg"
+                    alt="Apurva Pet Care Veterinary Clinic"
+                >
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>
+                About Our Clinic
+            </h2>
+
+            <p>
+                Caring for your pets like family
+            </p>
+
+        </div>
+
+
+        <div class="about">
+
+
+            <div class="about-box">
+
+                <h3>
+                    Welcome to Apurva Pet Care
+                </h3>
+
+                <p>
+                    Apurva Pet Care & Veterinary Clinic is dedicated
+                    to providing quality healthcare and compassionate
+                    treatment for pets.
+                </p>
+
+                <p>
+                    Our goal is to keep your pets healthy, active and
+                    happy through proper medical care, vaccination,
+                    grooming and preventive healthcare.
+                </p>
+
+                <p>
+                    We believe every pet deserves love, care and
+                    professional attention.
+                </p>
+
+                <a href="about.html" class="read-btn">
+                    Read More
+                </a>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <div class="about-card">
+                    🐕 🩺 🐈
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <h2>
+                Our Services
+            </h2>
+
+            <p>
+                Complete care for your beloved pets
+            </p>
+
+        </div>
+
+
+        <div class="service-container">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    General Consultation
+                </h3>
+
+                <p>
+                    Professional health check-ups and veterinary
+                    consultations for your pets.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💉
+                </div>
+
+                <h3>
+                    Vaccination
+                </h3>
+
+                <p>
+                    Keep your pets protected with proper vaccination
+                    and preventive healthcare.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🛁
+                </div>
+
+                <h3>
+                    Pet Grooming
+                </h3>
+
+                <p>
+                    Grooming services to keep your pets clean,
+                    comfortable and healthy.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🦷
+                </div>
+
+                <h3>
+                    Dental Care
+                </h3>
+
+                <p>
+                    Dental check-ups and oral care for maintaining
+                    your pet's healthy teeth and gums.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🩹
+                </div>
+
+                <h3>
+                    Surgery
+                </h3>
+
+                <p>
+                    Veterinary surgical care with proper attention
+                    and recovery support.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚑
+                </div>
+
+                <h3>
+                    Emergency Care
+                </h3>
+
+                <p>
+                    Support for urgent pet health situations.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>
+                Why Choose Us?
+            </h2>
+
+            <p>
+                Your pet's health is our priority
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Compassionate Care
+                </h3>
+
+                <p>
+                    We treat every pet with love and care.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Professional Care
+                </h3>
+
+                <p>
+                    Quality veterinary services for your pets.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    Modern Clinic
+                </h3>
+
+                <p>
+                    A comfortable environment for pets and owners.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🐾
+                </div>
+
+                <h3>
+                    Pet Friendly
+                </h3>
+
+                <p>
+                    A friendly and caring environment for every pet.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= APPOINTMENT ================= -->
+
+    <section class="appointment" id="appointment">
+
+        <div class="section-title">
+
+            <h2>
+                Book an Appointment
+            </h2>
+
+            <p>
+                Schedule a visit for your pet
+            </p>
+
+        </div>
+
+
+        <div class="appointment-box">
+
+            <form id="appointmentForm">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Owner Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Pet Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your pet's name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Pet Type
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Select Pet Type
+                        </option>
+
+                        <option>
+                            Dog
+                        </option>
+
+                        <option>
+                            Cat
+                        </option>
+
+                        <option>
+                            Rabbit
+                        </option>
+
+                        <option>
+                            Bird
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        placeholder="Enter phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Preferred Date
+                    </label>
+
+                    <input
+                        type="date"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Reason for Visit
+                    </label>
+
+                    <textarea
+                        placeholder="Describe your pet's problem"
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    🐾 Book Appointment
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                We are here to help you and your pet
+            </p>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>
+                    Clinic Address
+                </h3>
+
+                <p>
+                    Your Clinic Address
+                    <br>
+                    Your City, Andhra Pradesh
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    +91 95150 32158
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    🕐
+                </div>
+
+                <h3>
+                    Opening Hours
+                </h3>
+
+                <p>
+                    Monday - Saturday
+                    <br>
+                    9:00 AM - 7:00 PM
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <h2>
+            Your Pet Deserves the Best Care
+        </h2>
+
+        <p>
+            Give your pet the care, love and attention they deserve.
+        </p>
+
+        <a href="#appointment" class="cta-btn">
+            🐾 Book an Appointment
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            🐾
+            <strong>
+                Apurva Pet Care & Veterinary Clinic
+            </strong>
+        </p>
+
+        <p>
+            Caring for pets, supporting families ❤️
+        </p>
+
+        <p>
+            © 2026 Apurva Pet Care. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= APPOINTMENT POPUP ================= -->
+
+    <div class="popup" id="successPopup">
+
+        <div class="popup-box">
+
+            <div class="popup-icon">
+                ✅
+            </div>
+
+            <h2>
+                Appointment Booked!
+            </h2>
+
+            <p>
+                Your appointment has been booked successfully.
+                Thank you for choosing Apurva Pet Care! 🐾
+            </p>
+
+            <button
+                class="popup-btn"
+                onclick="closePopup()"
+            >
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const appointmentForm =
+            document.getElementById("appointmentForm");
+
+        const successPopup =
+            document.getElementById("successPopup");
+
+
+        appointmentForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            successPopup.style.display = "flex";
+
+            appointmentForm.reset();
+
+        });
+
+
+        function closePopup() {
+
+            successPopup.style.display = "none";
+
+        }
+
+
+        successPopup.addEventListener("click", function(event) {
+
+            if (event.target === successPopup) {
+
+                closePopup();
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Pet Health | Apurva Pet Care & Veterinary Clinic
+    </title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           PET HEALTH PAGE
+           ========================================= */
+
+        .pet-health-page {
+            padding: 60px 20px;
+        }
+
+
+        /* =========================================
+           INTRODUCTION
+           ========================================= */
+
+        .health-intro {
+
+            max-width: 1200px;
+
+            margin: 0 auto 60px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 40px;
+
+            align-items: center;
+        }
+
+
+        .health-intro-text h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .health-intro-text p {
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* INTRO IMAGE */
+
+        .health-intro-image {
+
+            width: 100%;
+
+            height: 300px;
+
+            overflow: hidden;
+
+            border-radius: 15px;
+        }
+
+
+        .health-intro-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            display: block;
+        }
+
+
+        /* =========================================
+           SECTION TITLE
+           ========================================= */
+
+        .health-title {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+
+        .health-title h2 {
+
+            font-size: 34px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .health-title p {
+
+            color: #666;
+        }
+
+
+        /* =========================================
+           HEALTH CARDS
+           ========================================= */
+
+        .health-cards {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+
+        /* CARD */
+
+        .health-card {
+
+            background: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s ease;
+        }
+
+
+        .health-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================================
+           ALL IMAGES SAME SIZE
+           ========================================= */
+
+        .health-card-image {
+
+            width: 100%;
+
+            height: 220px;
+
+            overflow: hidden;
+        }
+
+
+        .health-card-image img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            display: block;
+        }
+
+
+        /* =========================================
+           CARD CONTENT
+           ========================================= */
+
+        .health-card-content {
+
+            padding: 25px;
+        }
+
+
+        .health-card-content h3 {
+
+            margin-top: 0;
+
+            margin-bottom: 12px;
+
+            font-size: 21px;
+        }
+
+
+        .health-card-content p {
+
+            line-height: 1.7;
+
+            margin: 0;
+
+            color: #555;
+        }
+
+
+        /* =========================================
+           TABLET
+           ========================================= */
+
+        @media (max-width: 900px) {
+
+            .health-cards {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .health-intro {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 600px) {
+
+            .health-cards {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .health-card-image {
+
+                height: 220px;
+            }
+
+
+            .health-card-image img {
+
+                height: 220px;
+            }
+
+
+            .health-intro-image {
+
+                height: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+     ========================================= -->
+
+<header>
+
+    <div class="logo">
+
+        🐾 Apurva <span>Pet Care</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="pet-health.html"
+           class="active">
+            Pet-Health
+        </a>
+
+        <a href="tips.html">
+            Tips
+        </a>
+
+        <a href="appointment.html">
+            Appointment
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================
+     PAGE HERO
+     ========================================= -->
+
+<section class="page-hero">
+
+    <h1>
+        Pet <span>Health</span>
+    </h1>
+
+    <p>
+        Complete care and wellness information
+        for your beloved pets.
+    </p>
+
+</section>
+
+
+<!-- =========================================
+     MAIN CONTENT
+     ========================================= -->
+
+<section class="pet-health-page">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="health-intro">
+
+
+        <div class="health-intro-text">
+
+            <h2>
+                Healthy Pets, Happy Families
+            </h2>
+
+            <p>
+                At Apurva Pet Care & Veterinary Clinic,
+                we believe every pet deserves proper
+                healthcare, nutrition, exercise and love.
+            </p>
+
+            <p>
+                Regular veterinary care and healthy
+                daily habits can help your pet enjoy
+                a happy and active life.
+            </p>
+
+            <a href="appointment.html"
+               class="btn">
+
+                Book a Check-up
+
+            </a>
+
+        </div>
+
+
+        <!-- CLINIC IMAGE -->
+
+        <div class="health-intro-image">
+
+            <img
+                src="images/clinic.jpg"
+                alt="Apurva Pet Care Veterinary Clinic"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- SECTION TITLE -->
+
+    <div class="health-title">
+
+        <h2>
+            Essential Pet Health Care
+        </h2>
+
+        <p>
+            Important areas of care every pet owner
+            should know about.
+        </p>
+
+    </div>
+
+
+    <!-- =========================================
+         SIX HEALTH CARDS
+         ========================================= -->
+
+    <div class="health-cards">
+
+
+        <!-- 1. DOG -->
+
+        <div class="health-card">
+
+            <div class="health-card-image">
+
+                <img
+                    src="images/dog.jpg"
+                    alt="Dog health care"
+                >
+
+            </div>
+
+
+            <div class="health-card-content">
+
+                <h3>
+                    🐶 Dog Health
+                </h3>
+
+                <p>
+                    Regular veterinary check-ups,
+                    proper nutrition, exercise and
+                    preventive healthcare help keep
+                    dogs healthy and active.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2. CAT -->
+
+        <div class="health-card">
+
+            <div class="health-card-image">
+
+                <img
+                    src="images/cat.jpg"
+                    alt="Cat health care"
+                >
+
+            </div>
+
+
+            <div class="health-card-content">
+
+                <h3>
+                    🐱 Cat Health
+                </h3>
+
+                <p>
+                    Cats need balanced nutrition,
+                    vaccinations, hygiene and a
+                    comfortable environment to stay
+                    healthy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3. NUTRITION -->
+
+        <div class="health-card">
+
+            <div class="health-card-image">
+
+                <img
+                    src="images/nutrition.jpg"
+                    alt="Pet nutrition"
+                >
+
+            </div>
+
+
+            <div class="health-card-content">
+
+                <h3>
+                    🥗 Pet Nutrition
+                </h3>
+
+                <p>
+                    A balanced diet and fresh drinking
+                    water are important for maintaining
+                    your pet's health and energy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4. VACCINATION -->
+
+        <div class="health-card">
+
+            <div class="health-card-image">
+
+                <img
+                    src="images/vaccination.jpg"
+                    alt="Pet vaccination"
+                >
+
+            </div>
+
+
+            <div class="health-card-content">
+
+                <h3>
+                    💉 Vaccination
+                </h3>
+
+                <p>
+                    Keep your pet's vaccinations
+                    up to date according to the
+                    schedule recommended by your
+                    veterinarian.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5. CLINIC -->
+
+        <div class="health-card">
+
+            <div class="health-card-image">
+
+                <img
+                    src="images/clinic.jpg"
+                    alt="Veterinary clinic"
+                >
+
+            </div>
+
+
+            <div class="health-card-content">
+
+                <h3>
+                    🏥 Veterinary Clinic
+                </h3>
+
+                <p>
+                    Our clinic provides a caring
+                    environment where pets can receive
+                    professional veterinary attention.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6. GROOMING -->
+
+        <div class="health-card">
+
+            <div class="health-card-image">
+
+                <img
+                    src="images/grooming.jpg"
+                    alt="Pet grooming"
+                >
+
+            </div>
+
+
+            <div class="health-card-content">
+
+                <h3>
+                    🛁 Grooming
+                </h3>
+
+                <p>
+                    Regular grooming helps keep your
+                    pet clean, comfortable and looking
+                    their best.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CALL TO ACTION
+     ========================================= -->
+
+<section class="cta">
+
+    <h2>
+        Give Your Pet the Best Care
+    </h2>
+
+    <p>
+        Your pet's health and happiness matter to us.
+    </p>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer>
+
+    <p>
+
+        © <span class="current-year"></span>
+
+        Apurva Pet Care & Veterinary Clinic
+
+    </p>
+
+    <p>
+
+        Caring for your pets with love and compassion.
+
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

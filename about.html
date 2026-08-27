@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Apurva Pet Care & Veterinary Clinic</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8fffc;
+            line-height: 1.7;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #0b7a75;
+            color: white;
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd166;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* ================= HERO ================= */
+
+        .page-hero {
+            background: linear-gradient(135deg, #e7fff7, #d5f5ff);
+
+            text-align: center;
+
+            padding: 80px 8%;
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+            color: #075e59;
+            margin-bottom: 15px;
+        }
+
+        .page-hero h1 span {
+            color: #f4a261;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* ================= COMMON ================= */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #075e59;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* ================= ABOUT MAIN ================= */
+
+        .about-main {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            color: #0b7a75;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+            color: #555;
+        }
+
+        .about-image {
+            flex: 1;
+            min-height: 350px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ================= MISSION & VISION ================= */
+
+        .mission-section {
+            background-color: #f0fbf8;
+        }
+
+        .mission-container {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+        .mission-card {
+            background-color: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .mission-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .mission-card h3 {
+            color: #0b7a75;
+
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .mission-card p {
+            color: #666;
+        }
+
+        /* ================= VALUES ================= */
+
+        .values-container {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+        .value-card {
+            text-align: center;
+
+            padding: 30px 20px;
+
+            background-color: white;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .value-card .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .value-card h3 {
+            color: #075e59;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ================= DOCTOR ================= */
+
+        .doctor-section {
+            background-color: #e8f9f5;
+        }
+
+        .doctor-container {
+            max-width: 900px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 40px;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .doctor-image {
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            flex-shrink: 0;
+        }
+
+        .doctor-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .doctor-info h3 {
+            font-size: 28px;
+
+            color: #075e59;
+
+            margin-bottom: 5px;
+        }
+
+        .doctor-info .qualification {
+            color: #f4a261;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        .doctor-info p {
+            color: #666;
+
+            margin-bottom: 12px;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            text-align: center;
+
+            background-color: #0b7a75;
+
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            background-color: #ffd166;
+
+            color: #333;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #f4a261;
+            color: white;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #075e59;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 7px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .about-main {
+                flex-direction: column;
+            }
+
+            .about-image {
+                width: 100%;
+            }
+
+            .values-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .doctor-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .page-hero h1 {
+                font-size: 34px;
+            }
+
+            .mission-container,
+            .values-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .doctor-image {
+                width: 170px;
+                height: 170px;
+            }
+
+            .about-image img {
+                height: 280px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            🐾 Apurva <span>Pet Care</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="pet-health.html">Pet-Health</a>
+
+            <a href="tips.html">Tips</a>
+
+            <a href="appointment.html">Appointment</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <h1>
+            About <span>Us</span>
+        </h1>
+
+        <p>
+            Learn more about Apurva Pet Care & Veterinary Clinic
+        </p>
+
+    </section>
+
+
+    <!-- ================= ABOUT CLINIC ================= -->
+
+    <section>
+
+        <div class="about-main">
+
+            <div class="about-content">
+
+                <h2>
+                    Welcome to Apurva Pet Care
+                </h2>
+
+                <p>
+                    Apurva Pet Care & Veterinary Clinic is a
+                    pet-friendly veterinary clinic dedicated to
+                    providing compassionate and professional
+                    healthcare for pets.
+                </p>
+
+                <p>
+                    We understand that pets are more than animals.
+                    They are an important part of our families.
+                    That's why we focus on providing comfortable,
+                    caring and personalized veterinary services.
+                </p>
+
+                <p>
+                    From routine health check-ups and vaccinations
+                    to grooming and emergency care, our goal is to
+                    support your pet throughout every stage of life.
+                </p>
+
+                <p>
+                    We believe that preventive healthcare, proper
+                    nutrition and regular veterinary visits can help
+                    pets live healthier and happier lives.
+                </p>
+
+            </div>
+
+
+            <div class="about-image">
+
+                <img src="images/dog.jpg" alt="Happy dog">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MISSION & VISION ================= -->
+
+    <section class="mission-section">
+
+        <div class="section-title">
+
+            <h2>
+                Our Mission & Vision
+            </h2>
+
+            <p>
+                What we believe in
+            </p>
+
+        </div>
+
+
+        <div class="mission-container">
+
+            <div class="mission-card">
+
+                <div class="icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Our Mission
+                </h3>
+
+                <p>
+                    Our mission is to provide accessible,
+                    compassionate and quality veterinary care
+                    while helping pet owners make informed
+                    decisions about their pets' health.
+                </p>
+
+            </div>
+
+
+            <div class="mission-card">
+
+                <div class="icon">
+                    👁️
+                </div>
+
+                <h3>
+                    Our Vision
+                </h3>
+
+                <p>
+                    Our vision is to create a trusted pet-care
+                    environment where every pet receives the
+                    attention, protection and love they deserve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OUR VALUES ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>
+                Our Core Values
+            </h2>
+
+            <p>
+                The principles that guide our care
+            </p>
+
+        </div>
+
+
+        <div class="values-container">
+
+            <div class="value-card">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Compassion
+                </h3>
+
+                <p>
+                    Every pet deserves kindness, patience and
+                    understanding.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="icon">
+                    🩺
+                </div>
+
+                <h3>
+                    Quality Care
+                </h3>
+
+                <p>
+                    We aim to provide responsible and professional
+                    veterinary services.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Trust
+                </h3>
+
+                <p>
+                    We build strong relationships with pets and
+                    their owners.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="icon">
+                    🐾
+                </div>
+
+                <h3>
+                    Pet First
+                </h3>
+
+                <p>
+                    The health, safety and comfort of pets remain
+                    our priority.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= VETERINARIAN ================= -->
+
+    <section class="doctor-section">
+
+        <div class="section-title">
+
+            <h2>
+                Meet Our Veterinarian
+            </h2>
+
+            <p>
+                Professional care for your beloved companion
+            </p>
+
+        </div>
+
+
+        <div class="doctor-container">
+
+            <div class="doctor-image">
+
+                <img src="images/doctor.jpg" alt="Veterinary Doctor">
+
+            </div>
+
+
+            <div class="doctor-info">
+
+                <h3>
+                    Dr. Apurva
+                </h3>
+
+                <div class="qualification">
+                    Veterinary Doctor
+                </div>
+
+                <p>
+                    Our veterinary team is committed to providing
+                    thoughtful medical care and helping pet owners
+                    understand their pets' healthcare needs.
+                </p>
+
+                <p>
+                    With a focus on preventive care and compassionate
+                    treatment, we strive to make every visit as
+                    comfortable as possible for your pet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALL TO ACTION ================= -->
+
+    <section class="cta">
+
+        <h2>
+            Your Pet Deserves the Best Care
+        </h2>
+
+        <p>
+            Schedule a visit and take the next step toward
+            keeping your pet healthy and happy.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            🐾
+            <strong>
+                Apurva Pet Care & Veterinary Clinic
+            </strong>
+        </p>
+
+        <p>
+            Caring for pets, supporting families ❤️
+        </p>
+
+        <p>
+            © 2026 Apurva Pet Care. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

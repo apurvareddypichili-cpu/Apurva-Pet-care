@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Pet Care Tips | Apurva Pet Care & Veterinary Clinic
+    </title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8fffc;
+            line-height: 1.6;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #0b7a75;
+            color: white;
+
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        .logo span {
+            color: #ffd166;
+        }
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            margin-left: 18px;
+
+            font-size: 16px;
+        }
+
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .page-hero {
+            background: linear-gradient(
+                135deg,
+                #e7fff7,
+                #d5f5ff
+            );
+
+            text-align: center;
+
+            padding: 75px 8%;
+        }
+
+
+        .page-hero h1 {
+            font-size: 46px;
+
+            color: #075e59;
+
+            margin-bottom: 12px;
+        }
+
+
+        .page-hero h1 span {
+            color: #f4a261;
+        }
+
+
+        .page-hero p {
+            font-size: 18px;
+
+            color: #555;
+        }
+
+
+        /* ================= COMMON ================= */
+
+        section {
+            padding: 65px 8%;
+        }
+
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+
+        .section-title h2 {
+            font-size: 34px;
+
+            color: #075e59;
+
+            margin-bottom: 8px;
+        }
+
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* ================= TIPS GRID ================= */
+
+        .tips-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+        .tip-card {
+            background-color: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .tip-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* ================= TIP IMAGE ================= */
+
+        .tip-image {
+            height: 190px;
+
+            background-color: #e2f7f2;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .tip-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .tip-content {
+            padding: 25px;
+        }
+
+
+        .tip-category {
+            display: inline-block;
+
+            background-color: #e2f7f2;
+
+            color: #075e59;
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+        }
+
+
+        .tip-content h3 {
+            color: #0b7a75;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .tip-content p {
+            color: #666;
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .read-more {
+            color: #0b7a75;
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+            cursor: pointer;
+        }
+
+
+        .read-more:hover {
+            color: #f4a261;
+        }
+
+
+        /* ================= FEATURED TIP ================= */
+
+        .featured-section {
+            background-color: #f0fbf8;
+        }
+
+
+        .featured-tip {
+            max-width: 1000px;
+
+            margin: auto;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            display: grid;
+
+            grid-template-columns: 180px 1fr;
+
+            gap: 30px;
+
+            align-items: center;
+
+            box-shadow:
+                0 6px 22px rgba(0, 0, 0, 0.07);
+        }
+
+
+        .featured-icon {
+            width: 160px;
+
+            height: 160px;
+
+            background-color: #e2f7f2;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+
+        .featured-icon img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .featured-content h2 {
+            color: #075e59;
+
+            margin-bottom: 10px;
+        }
+
+
+        .featured-content p {
+            color: #666;
+
+            margin-bottom: 15px;
+        }
+
+
+        .featured-list {
+            list-style: none;
+        }
+
+
+        .featured-list li {
+            margin-bottom: 8px;
+
+            color: #555;
+        }
+
+
+        .featured-list li::before {
+            content: "✓";
+
+            color: #0b7a75;
+
+            font-weight: bold;
+
+            margin-right: 8px;
+        }
+
+
+        /* ================= WARNING ================= */
+
+        .warning-section {
+            background-color: #fff4ed;
+        }
+
+
+        .warning-box {
+            max-width: 1000px;
+
+            margin: auto;
+
+            background-color: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+
+        .warning-icon {
+            font-size: 65px;
+
+            min-width: 90px;
+
+            text-align: center;
+        }
+
+
+        .warning-content h2 {
+            color: #e76f51;
+
+            margin-bottom: 10px;
+        }
+
+
+        .warning-content p {
+            color: #666;
+        }
+
+
+        /* ================= QUICK TIPS ================= */
+
+        .quick-tips {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .quick-tip {
+            text-align: center;
+
+            padding: 25px 15px;
+
+            background-color: white;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+
+
+        .quick-tip-icon {
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .quick-tip h3 {
+            color: #075e59;
+
+            margin-bottom: 7px;
+        }
+
+
+        .quick-tip p {
+            color: #666;
+
+            font-size: 13px;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .cta {
+            background-color: #0b7a75;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .cta h2 {
+            font-size: 35px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .cta p {
+            font-size: 18px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #075e59;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+
+        footer p {
+            margin: 7px;
+        }
+
+
+        /* ================= MODAL ================= */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            z-index: 2000;
+
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color:
+                rgba(0, 0, 0, 0.55);
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+        }
+
+
+        .modal-content {
+            background-color: white;
+
+            max-width: 650px;
+
+            width: 100%;
+
+            max-height: 85vh;
+
+            overflow-y: auto;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            position: relative;
+        }
+
+
+        .close {
+            position: absolute;
+
+            right: 20px;
+
+            top: 12px;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            color: #555;
+        }
+
+
+        .close:hover {
+            color: #e76f51;
+        }
+
+
+        .modal-content h2 {
+            color: #075e59;
+
+            margin-bottom: 15px;
+        }
+
+
+        .modal-content h3 {
+            color: #0b7a75;
+
+            margin-top: 20px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .modal-content p {
+            color: #666;
+
+            margin-bottom: 10px;
+        }
+
+
+        .modal-content ul {
+            margin-left: 20px;
+
+            color: #666;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1000px) {
+
+            .tips-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .quick-tips {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            nav {
+                text-align: center;
+            }
+
+
+            nav a {
+                margin: 0 5px;
+
+                font-size: 14px;
+            }
+
+
+            .page-hero h1 {
+                font-size: 35px;
+            }
+
+
+            .tips-container {
+                grid-template-columns: 1fr;
+            }
+
+
+            .quick-tips {
+                grid-template-columns: 1fr;
+            }
+
+
+            .featured-tip {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+
+            .featured-icon {
+                margin: auto;
+            }
+
+
+            .warning-box {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            🐾 Apurva <span>Pet Care</span>
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="pet-health.html">
+                Pet-Health
+            </a>
+
+            <a href="tips.html">
+                Tips
+            </a>
+
+            <a href="appointment.html">
+                Appointment
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="page-hero">
+
+        <h1>
+            Pet Care <span>Tips</span>
+        </h1>
+
+        <p>
+            Simple guidance to help your pets live healthier
+            and happier lives
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= MAIN TIPS ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>
+                Helpful Pet Care Tips
+            </h2>
+
+            <p>
+                Learn about everyday care for your beloved companions
+            </p>
+
+        </div>
+
+
+        <div class="tips-container">
+
+
+            <!-- ================= TIP 1 ================= -->
+
+            <div class="tip-card">
+
+                <div class="tip-image">
+
+                    <img src="images/healthy-diet.jpg"
+                         alt="Healthy pet food">
+
+                </div>
+
+
+                <div class="tip-content">
+
+                    <span class="tip-category">
+                        Nutrition
+                    </span>
+
+                    <h3>
+                        Healthy Nutrition
+                    </h3>
+
+                    <p>
+                        Provide your pet with an appropriate,
+                        balanced diet and access to clean
+                        drinking water.
+                    </p>
+
+                    <a class="read-more"
+                       onclick="openTip('nutrition')">
+
+                        Read More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= TIP 2 ================= -->
+
+            <div class="tip-card">
+
+                <div class="tip-image">
+
+                    <img src="images/exercise.jpg"
+                         alt="Dog exercising">
+
+                </div>
+
+
+                <div class="tip-content">
+
+                    <span class="tip-category">
+                        Exercise
+                    </span>
+
+                    <h3>
+                        Regular Exercise
+                    </h3>
+
+                    <p>
+                        Appropriate physical activity can
+                        support your pet's fitness and
+                        overall well-being.
+                    </p>
+
+                    <a class="read-more"
+                       onclick="openTip('exercise')">
+
+                        Read More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= TIP 3 ================= -->
+
+            <div class="tip-card">
+
+                <div class="tip-image">
+
+                    <img src="images/vaccination.jpg"
+                         alt="Pet vaccination">
+
+                </div>
+
+
+                <div class="tip-content">
+
+                    <span class="tip-category">
+                        Prevention
+                    </span>
+
+                    <h3>
+                        Vaccination
+                    </h3>
+
+                    <p>
+                        Keep track of your pet's vaccination
+                        schedule and discuss preventive care
+                        with your veterinarian.
+                    </p>
+
+                    <a class="read-more"
+                       onclick="openTip('vaccination')">
+
+                        Read More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= TIP 4 ================= -->
+
+            <div class="tip-card">
+
+                <div class="tip-image">
+
+                    <img src="images/grooming.jpg"
+                         alt="Pet grooming">
+
+                </div>
+
+
+                <div class="tip-content">
+
+                    <span class="tip-category">
+                        Grooming
+                    </span>
+
+                    <h3>
+                        Grooming & Hygiene
+                    </h3>
+
+                    <p>
+                        Regular grooming helps maintain
+                        cleanliness and allows you to notice
+                        changes in your pet's condition.
+                    </p>
+
+                    <a class="read-more"
+                       onclick="openTip('grooming')">
+
+                        Read More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= TIP 5 ================= -->
+
+            <div class="tip-card">
+
+                <div class="tip-image">
+
+                    <img src="images/dental-care.jpg"
+                         alt="Pet dental care">
+
+                </div>
+
+
+                <div class="tip-content">
+
+                    <span class="tip-category">
+                        Dental Care
+                    </span>
+
+                    <h3>
+                        Dental Health
+                    </h3>
+
+                    <p>
+                        Regular dental care can help support
+                        healthy teeth and gums.
+                    </p>
+
+                    <a class="read-more"
+                       onclick="openTip('dental')">
+
+                        Read More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= TIP 6 ================= -->
+
+            <div class="tip-card">
+
+                <div class="tip-image">
+
+                    <img src="images/checkup.jpg"
+                         alt="Veterinarian checkup">
+
+                </div>
+
+
+                <div class="tip-content">
+
+                    <span class="tip-category">
+                        Healthcare
+                    </span>
+
+                    <h3>
+                        Regular Check-ups
+                    </h3>
+
+                    <p>
+                        Routine veterinary visits can help
+                        identify potential health concerns
+                        early.
+                    </p>
+
+                    <a class="read-more"
+                       onclick="openTip('checkup')">
+
+                        Read More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURED ================= -->
+
+    <section class="featured-section">
+
+        <div class="section-title">
+
+            <h2>
+                Featured Pet Care Guide
+            </h2>
+
+            <p>
+                Everyday habits that can support your pet's well-being
+            </p>
+
+        </div>
+
+
+        <div class="featured-tip">
+
+
+            <div class="featured-icon">
+
+                <img src="images/healthy-diet.jpg"
+                     alt="Healthy pet routine">
+
+            </div>
+
+
+            <div class="featured-content">
+
+                <h2>
+                    Build a Healthy Routine
+                </h2>
+
+                <p>
+                    A consistent routine can make it easier to
+                    monitor your pet's health and notice changes.
+                </p>
+
+
+                <ul class="featured-list">
+
+                    <li>
+                        Provide appropriate food and fresh water.
+                    </li>
+
+                    <li>
+                        Give suitable exercise and activity.
+                    </li>
+
+                    <li>
+                        Maintain regular grooming and hygiene.
+                    </li>
+
+                    <li>
+                        Keep vaccinations and preventive care
+                        up to date.
+                    </li>
+
+                    <li>
+                        Schedule veterinary check-ups when needed.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WARNING SIGNS ================= -->
+
+    <section class="warning-section">
+
+        <div class="section-title">
+
+            <h2>
+                Know When to Contact a Veterinarian
+            </h2>
+
+            <p>
+                Changes in your pet's health should not be ignored
+            </p>
+
+        </div>
+
+
+        <div class="warning-box">
+
+            <div class="warning-icon">
+                ⚠️
+            </div>
+
+
+            <div class="warning-content">
+
+                <h2>
+                    Watch for Unusual Changes
+                </h2>
+
+                <p>
+                    Contact a veterinarian if your pet shows
+                    significant or persistent changes such as
+                    unusual behavior, difficulty breathing,
+                    repeated vomiting, severe weakness,
+                    serious injury, or other concerning symptoms.
+                </p>
+
+                <p>
+                    If you believe your pet is experiencing a
+                    serious emergency, seek veterinary attention
+                    promptly.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= QUICK TIPS ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>
+                Quick Pet Care Tips
+            </h2>
+
+            <p>
+                Small habits can make a difference
+            </p>
+
+        </div>
+
+
+        <div class="quick-tips">
+
+
+            <div class="quick-tip">
+
+                <div class="quick-tip-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Fresh Water
+                </h3>
+
+                <p>
+                    Make clean drinking water available
+                    for your pet.
+                </p>
+
+            </div>
+
+
+
+            <div class="quick-tip">
+
+                <div class="quick-tip-icon">
+                    🧸
+                </div>
+
+                <h3>
+                    Safe Environment
+                </h3>
+
+                <p>
+                    Keep your pet's environment comfortable
+                    and free from hazards.
+                </p>
+
+            </div>
+
+
+
+            <div class="quick-tip">
+
+                <div class="quick-tip-icon">
+                    🦮
+                </div>
+
+                <h3>
+                    Daily Activity
+                </h3>
+
+                <p>
+                    Provide activity appropriate for your
+                    pet's age and condition.
+                </p>
+
+            </div>
+
+
+
+            <div class="quick-tip">
+
+                <div class="quick-tip-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Give Attention
+                </h3>
+
+                <p>
+                    Spend quality time with your pet and
+                    observe their normal behavior.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <h2>
+            Have Questions About Your Pet?
+        </h2>
+
+        <p>
+            Schedule a consultation with our veterinary clinic.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            🐾
+
+            <strong>
+                Apurva Pet Care & Veterinary Clinic
+            </strong>
+
+        </p>
+
+        <p>
+            Caring for pets, supporting families ❤️
+        </p>
+
+        <p>
+            © 2026 Apurva Pet Care. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div class="modal"
+         id="tipModal">
+
+        <div class="modal-content">
+
+            <span class="close"
+                  onclick="closeTip()">
+
+                &times;
+
+            </span>
+
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const modal =
+            document.getElementById("tipModal");
+
+
+        const modalContent =
+            document.getElementById("modalContent");
+
+
+        function openTip(type) {
+
+            let content = "";
+
+
+            if (type === "nutrition") {
+
+                content = `
+
+                    <h2>
+                        🥗 Healthy Nutrition
+                    </h2>
+
+                    <p>
+                        Good nutrition is an important part of
+                        maintaining your pet's overall health.
+                    </p>
+
+                    <h3>
+                        Helpful Practices
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Choose food appropriate for your
+                            pet's species, age and needs.
+                        </li>
+
+                        <li>
+                            Provide access to clean drinking water.
+                        </li>
+
+                        <li>
+                            Avoid giving foods that may be unsafe
+                            for pets.
+                        </li>
+
+                        <li>
+                            Monitor your pet's body condition
+                            and weight.
+                        </li>
+
+                        <li>
+                            Ask your veterinarian for individualized
+                            nutrition advice.
+                        </li>
+
+                    </ul>
+                `;
+            }
+
+
+            else if (type === "exercise") {
+
+                content = `
+
+                    <h2>
+                        🏃 Regular Exercise
+                    </h2>
+
+                    <p>
+                        Physical activity can support your pet's
+                        fitness, mobility and mental well-being.
+                    </p>
+
+                    <h3>
+                        Helpful Practices
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Provide age-appropriate daily activity.
+                        </li>
+
+                        <li>
+                            Use safe play areas.
+                        </li>
+
+                        <li>
+                            Allow suitable rest periods.
+                        </li>
+
+                        <li>
+                            Watch for signs of excessive fatigue.
+                        </li>
+
+                        <li>
+                            Ask a veterinarian about exercise if
+                            your pet has health concerns.
+                        </li>
+
+                    </ul>
+                `;
+            }
+
+
+            else if (type === "vaccination") {
+
+                content = `
+
+                    <h2>
+                        💉 Vaccination
+                    </h2>
+
+                    <p>
+                        Vaccinations are an important part of
+                        preventive veterinary care.
+                    </p>
+
+                    <h3>
+                        Helpful Practices
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Keep a record of your pet's vaccinations.
+                        </li>
+
+                        <li>
+                            Follow the vaccination schedule
+                            recommended by your veterinarian.
+                        </li>
+
+                        <li>
+                            Keep your pet's health records organized.
+                        </li>
+
+                        <li>
+                            Ask your veterinarian which vaccines
+                            are appropriate for your pet.
+                        </li>
+
+                    </ul>
+                `;
+            }
+
+
+            else if (type === "grooming") {
+
+                content = `
+
+                    <h2>
+                        🛁 Grooming & Hygiene
+                    </h2>
+
+                    <p>
+                        Regular grooming can help maintain your
+                        pet's cleanliness and comfort.
+                    </p>
+
+                    <h3>
+                        Helpful Practices
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Brush your pet according to their
+                            coat type.
+                        </li>
+
+                        <li>
+                            Keep nails at an appropriate length.
+                        </li>
+
+                        <li>
+                            Maintain clean bedding and living areas.
+                        </li>
+
+                        <li>
+                            Check the skin and coat for unusual changes.
+                        </li>
+
+                        <li>
+                            Seek veterinary advice if you notice
+                            persistent skin problems.
+                        </li>
+
+                    </ul>
+                `;
+            }
+
+
+            else if (type === "dental") {
+
+                content = `
+
+                    <h2>
+                        🦷 Dental Health
+                    </h2>
+
+                    <p>
+                        Oral health is an important part of
+                        your pet's overall well-being.
+                    </p>
+
+                    <h3>
+                        Helpful Practices
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Follow a veterinarian-approved
+                            dental care routine.
+                        </li>
+
+                        <li>
+                            Monitor your pet for changes
+                            in eating behavior.
+                        </li>
+
+                        <li>
+                            Look for unusual mouth odor or
+                            visible dental problems.
+                        </li>
+
+                        <li>
+                            Schedule professional dental
+                            assessments when recommended.
+                        </li>
+
+                    </ul>
+                `;
+            }
+
+
+            else if (type === "checkup") {
+
+                content = `
+
+                    <h2>
+                        🩺 Regular Veterinary Check-ups
+                    </h2>
+
+                    <p>
+                        Routine veterinary visits can help monitor
+                        your pet's health and identify concerns early.
+                    </p>
+
+                    <h3>
+                        Helpful Practices
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Keep your pet's medical records organized.
+                        </li>
+
+                        <li>
+                            Discuss changes in behavior, appetite
+                            or activity with your veterinarian.
+                        </li>
+
+                        <li>
+                            Maintain recommended preventive care.
+                        </li>
+
+                        <li>
+                            Bring vaccination and health records
+                            to appointments.
+                        </li>
+
+                    </ul>
+                `;
+            }
+
+
+            modalContent.innerHTML = content;
+
+            modal.style.display = "flex";
+        }
+
+
+        function closeTip() {
+
+            modal.style.display = "none";
+
+        }
+
+
+        window.onclick = function(event) {
+
+            if (event.target === modal) {
+
+                closeTip();
+
+            }
+
+        };
+
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    closeTip();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

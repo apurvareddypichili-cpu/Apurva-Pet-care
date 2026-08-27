@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Services | Apurva Pet Care & Veterinary Clinic</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8fffc;
+            line-height: 1.6;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #0b7a75;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd166;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+
+        /* ================= PAGE HERO ================= */
+
+        .page-hero {
+            background: linear-gradient(135deg, #e7fff7, #d5f5ff);
+            text-align: center;
+            padding: 80px 8%;
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+            color: #075e59;
+            margin-bottom: 15px;
+        }
+
+        .page-hero h1 span {
+            color: #f4a261;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: #555;
+        }
+
+
+        /* ================= COMMON ================= */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #075e59;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 35px 25px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* ================= SERVICE IMAGE ================= */
+
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #e2f7f2;
+            border: 4px solid #d5f5ef;
+        }
+
+        .service-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .service-card h3 {
+            color: #0b7a75;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .service-list li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .service-list li::before {
+            content: "✓";
+            color: #0b7a75;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .service-btn {
+            display: inline-block;
+            padding: 11px 20px;
+            background-color: #0b7a75;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .service-btn:hover {
+            background-color: #075e59;
+        }
+
+
+        /* ================= EMERGENCY ================= */
+
+        .emergency {
+            background-color: #fff4ed;
+        }
+
+        .emergency-box {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .emergency-icon {
+            font-size: 70px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .emergency-content h2 {
+            color: #e76f51;
+            margin-bottom: 10px;
+        }
+
+        .emergency-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .emergency-note {
+            font-weight: bold;
+            color: #e76f51;
+        }
+
+
+        /* ================= PROCESS ================= */
+
+        .process-section {
+            background-color: #f0fbf8;
+        }
+
+        .process-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .process-card {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .process-number {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 15px;
+            background-color: #0b7a75;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .process-card h3 {
+            color: #075e59;
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #075e59;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 7px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1000px) {
+
+            .services-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            .page-hero h1 {
+                font-size: 36px;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+
+            .process-container {
+                grid-template-columns: 1fr;
+            }
+
+            .emergency-box {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            🐾 Apurva <span>Pet Care</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="pet-health.html">Pet-Health</a>
+
+            <a href="tips.html">Tips</a>
+
+            <a href="appointment.html">Appointment</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <h1>
+            Our <span>Services</span>
+        </h1>
+
+        <p>
+            Complete veterinary care for your beloved companions
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>
+                What We Offer
+            </h2>
+
+            <p>
+                Professional care for pets at every stage of life
+            </p>
+
+        </div>
+
+
+        <div class="services-container">
+
+
+            <!-- ================= SERVICE 1 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <img
+                        src="images/consultation.jpg"
+                        alt="General Pet Consultation"
+                    >
+
+                </div>
+
+                <h3>
+                    General Consultation
+                </h3>
+
+                <p>
+                    Regular health examinations to monitor your
+                    pet's overall health and identify potential
+                    problems early.
+                </p>
+
+                <ul class="service-list">
+
+                    <li>Routine health check-up</li>
+
+                    <li>Physical examination</li>
+
+                    <li>Health advice</li>
+
+                    <li>Preventive care guidance</li>
+
+                </ul>
+
+                <a
+                    href="appointment.html"
+                    class="service-btn"
+                >
+                    Book Consultation
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 2 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <img
+                        src="images/vaccination.jpg"
+                        alt="Pet Vaccination"
+                    >
+
+                </div>
+
+                <h3>
+                    Vaccination
+                </h3>
+
+                <p>
+                    Vaccination helps protect pets from
+                    preventable infectious diseases.
+                </p>
+
+                <ul class="service-list">
+
+                    <li>Vaccination consultation</li>
+
+                    <li>Vaccination schedule</li>
+
+                    <li>Puppy & kitten vaccination</li>
+
+                    <li>Annual vaccination guidance</li>
+
+                </ul>
+
+                <a
+                    href="appointment.html"
+                    class="service-btn"
+                >
+                    Book Vaccination
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 3 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <img
+                        src="images/grooming.jpg"
+                        alt="Pet Grooming"
+                    >
+
+                </div>
+
+                <h3>
+                    Pet Grooming
+                </h3>
+
+                <p>
+                    Grooming helps your pet stay clean,
+                    comfortable and well cared for.
+                </p>
+
+                <ul class="service-list">
+
+                    <li>Bathing</li>
+
+                    <li>Hair trimming</li>
+
+                    <li>Nail trimming</li>
+
+                    <li>Basic hygiene care</li>
+
+                </ul>
+
+                <a
+                    href="appointment.html"
+                    class="service-btn"
+                >
+                    Book Grooming
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 4 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <img
+                        src="images/dental.jpg"
+                        alt="Pet Dental Care"
+                    >
+
+                </div>
+
+                <h3>
+                    Dental Care
+                </h3>
+
+                <p>
+                    Proper dental care is important for maintaining
+                    your pet's oral health.
+                </p>
+
+                <ul class="service-list">
+
+                    <li>Dental examination</li>
+
+                    <li>Oral health assessment</li>
+
+                    <li>Dental hygiene guidance</li>
+
+                    <li>Preventive dental care</li>
+
+                </ul>
+
+                <a
+                    href="appointment.html"
+                    class="service-btn"
+                >
+                    Book Dental Care
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 5 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <img
+                        src="images/surgery.jpg"
+                        alt="Veterinary Surgery"
+                    >
+
+                </div>
+
+                <h3>
+                    Veterinary Surgery
+                </h3>
+
+                <p>
+                    Surgical procedures are performed with
+                    appropriate veterinary assessment and care.
+                </p>
+
+                <ul class="service-list">
+
+                    <li>Surgical consultation</li>
+
+                    <li>Pre-surgery assessment</li>
+
+                    <li>Post-surgery care</li>
+
+                    <li>Recovery guidance</li>
+
+                </ul>
+
+                <a
+                    href="appointment.html"
+                    class="service-btn"
+                >
+                    Consult Doctor
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= SERVICE 6 ================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <img
+                        src="images/nutrition.jpg"
+                        alt="Pet Nutrition Guidance"
+                    >
+
+                </div>
+
+                <h3>
+                    Nutrition Guidance
+                </h3>
+
+                <p>
+                    Get guidance about appropriate nutrition
+                    and healthy feeding habits for your pet.
+                </p>
+
+                <ul class="service-list">
+
+                    <li>Diet assessment</li>
+
+                    <li>Feeding guidance</li>
+
+                    <li>Weight management</li>
+
+                    <li>Healthy diet planning</li>
+
+                </ul>
+
+                <a
+                    href="appointment.html"
+                    class="service-btn"
+                >
+                    Consult Doctor
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= EMERGENCY CARE ================= -->
+
+    <section class="emergency">
+
+        <div class="emergency-box">
+
+            <div class="emergency-icon">
+                🚑
+            </div>
+
+            <div class="emergency-content">
+
+                <h2>
+                    Emergency Pet Care
+                </h2>
+
+                <p>
+                    If your pet has a serious or sudden health
+                    problem, seek veterinary attention promptly.
+                </p>
+
+                <p class="emergency-note">
+                    For emergencies, please contact the clinic
+                    directly.
+                </p>
+
+                <p>
+                    📞 Phone:
+                    <strong>
+                        +91 95150 32158
+                    </strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HOW WE CARE ================= -->
+
+    <section class="process-section">
+
+        <div class="section-title">
+
+            <h2>
+                Our Pet Care Process
+            </h2>
+
+            <p>
+                Simple steps for better pet healthcare
+            </p>
+
+        </div>
+
+
+        <div class="process-container">
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    1
+                </div>
+
+                <h3>
+                    Book
+                </h3>
+
+                <p>
+                    Schedule an appointment according to
+                    your convenience.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    2
+                </div>
+
+                <h3>
+                    Examine
+                </h3>
+
+                <p>
+                    Your pet receives a veterinary health
+                    examination.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    3
+                </div>
+
+                <h3>
+                    Treat
+                </h3>
+
+                <p>
+                    Appropriate care and treatment are
+                    recommended by the veterinarian.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    4
+                </div>
+
+                <h3>
+                    Follow Up
+                </h3>
+
+                <p>
+                    Follow-up care helps monitor your pet's
+                    recovery and ongoing health.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            🐾
+            <strong>
+                Apurva Pet Care & Veterinary Clinic
+            </strong>
+        </p>
+
+        <p>
+            Caring for pets, supporting families ❤️
+        </p>
+
+        <p>
+            © 2026 Apurva Pet Care. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
